@@ -1,0 +1,124 @@
+:root{
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+
+    --primario: #784D3C;
+    --blanco: #ffffff;
+    --negro: #000000;
+
+}
+ 
+html{
+    box-sizing: border-box; /* para hacer que el border o pading no afecte el ancho de nuestros elementos*/
+    font-size: 62.5%; /*para que 1 rem sea igual a 10px*/
+
+}
+
+*,*:before, *::after{
+    box-sizing: inherit; /* hara mas dinamico todo*/
+
+}
+
+body{
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2; /*como es un blog lo que haremos es comun tener un interlineado mas grande para hacer mas facil la lectura del contenido*/
+
+}
+
+/* Globales */
+/* Todo lo que se utilizara de forma predeterminada, que ya tengamos conocimiento lo pondremos en las globales  */
+.contenedor{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+
+}
+
+h1, h2, h3, h4{
+    font-family: var(--fuenteHeading);
+}
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.8rem;
+}
+
+/* Utilidades */
+
+.no-margin{
+    margin: 0 ;
+
+}
+.no-padding{
+    padding: 0;
+}
+.centrar-texto{
+    text-align: center;
+}
+
+/* Header */
+
+.header{
+    background-image: url(../img/banner.jpg);
+    height: 60rem;
+    background-size: cover; /*Cubra por completo la pagina*/
+    background-repeat: no-repeat;
+    background-position: center center; /*Tenemos doble center ya que lo estamos centrando primero en eje X y luego en eje Y*/
+}
+
+.header__texto{
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 5rem;
+    
+}
+@media (min-width: 768px) {
+    .header__texto{
+        margin-top: 15rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .barra{
+        display:flex;
+        justify-content: space-between; /*para organizar horizontalmente*/
+        align-items: center; /*Para alinear verticalmente*/
+    }
+
+}
+
+.logo{
+    color:var(--blanco);
+
+}
+.logo__nombre{
+    font-weight: 400;
+}
+.logo__bold{
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .navegacion{
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.navegacion__enlace{
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
