@@ -4,12 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/css.css">
+   
+    <!-- Preffetch -->
+
+    <link rel="prefetch" href="nosotros.html" as="document">
+
+    <!-- Preload -->
     
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
+    crossorigin="crossorigin" as="font" >
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+
+    <link rel="preload" href="css/css.css" as="style">
+    <link rel="stylesheet" href="css/css.css">
+
     <title>ClubDelCafé</title>
 </head>
 <body>
@@ -40,7 +54,10 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog1.jpg" alt="imagen blog">
+                    <picture>
+                        <source loading="lazy" rcset="img/blog1.webp" type="image/webp">
+                        <img src="img/blog1.jpg" alt="imagen blog" loading="lazy">
+                    </picture>
                 </div>
                 <div class="entrada__contenido">
                     <h4 class="no-margin">Tipos de Grano de Café</h4>
@@ -53,8 +70,10 @@
             
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog2.jpg" alt="imagen blog">
-                </div>
+                    <picture>
+                        <source loading="lazy" srcset="img/blog2.webp" type="image/webp">
+                        <img src="img/blog2.jpg" alt="imagen blog" loading="lazy">
+                    </picture>                </div>
                 <div class="entrada__contenido">
                     <h4 class="no-margin">3 Deliciosas Recetas de Café</h4>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi blanditiis, facilis eius amet, soluta, dolorem provident libero perferendis cumque assumenda fugiat asperiores aliquid inventore suscipit nemo. V
@@ -66,8 +85,10 @@
          
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog3.jpg" alt="imagen blog">
-                </div>
+                    <picture>
+                        <source loading="lazy" srcset="img/blog3.webp" type="image/webp">
+                        <img src="img/blog3.jpg" alt="imagen blog" loading="lazy">
+                    </picture>                </div>
                 <div class="entrada__contenido">
                     <h4 class="no-margin">Beneficios del Café</h4>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi blanditiis, facilis eius amet, soluta, dolorem provident libero perferendis cumque assumenda fugiat asperiores aliquid inventore suscipit nemo. V
@@ -124,5 +145,7 @@
             </div>
         </div>
     </footer>
+    
+    <script src="js/modernizr.js"></script>
 </body>
 </html>

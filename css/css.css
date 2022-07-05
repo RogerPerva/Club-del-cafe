@@ -29,7 +29,7 @@ body{
 
 }
 
-/* Globales */
+/* Globales */  
 /* Todo lo que se utilizara de forma predeterminada, que ya tengamos conocimiento lo pondremos en las globales  */
 .contenedor{
     max-width: 120rem;
@@ -74,9 +74,13 @@ img{
 }
 
 /* Header */
-
-.header{
+.webp .header{
+    background-image: url(../img/banner.webp);
+}
+.no-webp .header{
     background-image: url(../img/banner.jpg);
+}
+.header{
     height: 60rem;
     background-size: cover; /*Cubra por completo la pagina*/
     background-repeat: no-repeat;
