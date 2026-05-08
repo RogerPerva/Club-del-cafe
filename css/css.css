@@ -199,7 +199,7 @@ img{
 }
 .widget-curso:last-of-type{
     border-bottom: 0;
-    margin-bottom: none;
+    margin-bottom: 0;
 }
 
 .widget-curso__label{
@@ -306,4 +306,11 @@ font-family: var(--fuenteHeading);
 }
 .campo__field--textarea{
     height: 20rem;
+}
+
+/* Accesibilidad */
+.navegacion__enlace:focus-visible,
+.boton:focus-visible {
+    outline: 3px solid var(--primario);
+    outline-offset: 3px;
 }
